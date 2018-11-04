@@ -1,0 +1,26 @@
+body {
+
+}
+
+header {
+  background: #000000 url("/images/logo.png") no-repeat center;
+  height: 460px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  nav {
+    align-self: flex-end;
+    margin: 75px;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+    }
+  }
+}
