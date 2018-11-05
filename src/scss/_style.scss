@@ -24,3 +24,19 @@ header {
     }
   }
 }
+
+section {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-auto-rows: 50vw;
+  grid-gap: 10px;
+
+  article {
+    img {
+      height: 300px;
+      width: auto;
+    }
+  }
+
+
+}
