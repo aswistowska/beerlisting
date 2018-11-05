@@ -9,10 +9,12 @@ export default class GridView {
     }
 
     renderBeer(beer) {
-        return `<article><img src="${beer.imageUrl}"><h1>${beer.name}</h1><p>${beer.description}</p>
+        return `<article><img src="${beer.imageUrl}">
+        <div class="descriptions-box">
+        <h1>${beer.name}</h1><p>${beer.description}</p>
         <div class="squares"><p>ABV</p><p>${beer.abv}</p></div>
         <div class="squares"><p>IBU</p><p>${beer.ibu}</p></div>
-        <div class="squares"><p>pH</p><p>${beer.ph}</p></div></article>`;
+        <div class="squares"><p>pH</p><p>${beer.ph}</p></div></div></article>`;
     }
 
     render(beersList) {

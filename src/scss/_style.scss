@@ -20,6 +20,7 @@ header {
         color: #ffffff;
         text-transform: uppercase;
         font-size: 16px;
+        margin: 10px;
       }
     }
   }
@@ -27,16 +28,45 @@ header {
 
 section {
   display: grid;
-  grid-template-columns: 33% 34% 33%;
-  grid-auto-rows: 50vw;
-  grid-gap: 10px;
+  grid-template-columns: 33% 33% 33%;
+  padding: 10px;
 
   article {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background: #EFEFEF;
+
     img {
       height: 300px;
       width: auto;
     }
-  }
 
+    .descriptions-box {
+
+      h1 {
+        font-size: 22px;
+        font-family: "Open Sans";
+        font-weight: 300;
+        text-transform: capitalize;
+        margin: 10px 0 10px 0;
+      }
+
+      p {
+        margin: 10px;
+        height: auto;
+      }
+
+      .squares {
+        display: inline-block;
+        align-self: flex-end;
+        width: 30%;
+
+        p {
+          height: auto;
+        }
+      }
+    }
+  }
 
 }
