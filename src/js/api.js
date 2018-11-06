@@ -13,9 +13,7 @@ export default class Api{
 
         return fetch(url)
             .then(response => response.json())
-            .then(function(myJson) {
-                return myJson.map(json => new Beer(json));
-            });
+            .then(myJson => myJson.map(json => new Beer(json)));
     }
 
     fetchRandomBeerApi() {
@@ -23,8 +21,6 @@ export default class Api{
 
         return fetch(url)
             .then(response => response.json())
-            .then(function(myJson) {
-                return myJson.map(json => new Beer(json));
-            });
+            .then(myJson => new Beer(myJson[0]));
     }
 }

@@ -1,0 +1,37 @@
+.single-beer-container {
+  height: 500px;
+  margin: 20px;
+  background: #EFEFEF;
+  display: flex;
+  align-items: center;
+
+  .single-beer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      height: 300px;
+    }
+
+    .single-beer-description {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      text-align: center;
+
+      h1 {
+        font-size: 22px;
+        font-family: "Open Sans";
+        font-weight: 300;
+        text-transform: capitalize;
+        margin: 10px 0 10px 0;
+      }
+
+      .squares {
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+  }
+}

@@ -1,6 +1,9 @@
+import Ingredients from "./ingredients";
+
 export default class Beer {
 
     constructor(json) {
+        console.log(json);
         this.json = json;
     }
 
@@ -26,5 +29,9 @@ export default class Beer {
 
     get ph() {
         return this.json["ph"];
+    }
+
+    get ingredients() {
+        return new Ingredients(this.json["ingredients"]);
     }
 }
