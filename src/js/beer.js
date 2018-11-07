@@ -34,4 +34,8 @@ export default class Beer {
     get ingredients() {
         return new Ingredients(this.json["ingredients"]);
     }
+
+    get tagline() {
+        return this.json["tagline"];
+    }
 }
