@@ -43,7 +43,7 @@ export default class Api{
         encodeStr("hops", hops);
         encodeInt("abv", abv);
         encodeInt("ibu", ibu, 3);
-        encodeInt("ebc", ebc);
+        encodeInt("ebc", ebc, 5);
         params.push("per_page=78");
 
         const joinedParams = params.join("&");
