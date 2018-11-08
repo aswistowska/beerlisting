@@ -5,12 +5,20 @@ export default class BeerSelectorView {
 
     render() {
         return `<div class="beer-selector">
-                    <h1>Pick a beer</h1>
                     <form>
-                        Name <input type="text">
-                        Hops <input type="text"><br>
-                        Abv <input type="text"> Ibu <input type="text"> Ebc <input type="text"><br>
-                        <button>Find beer</button>
+                        <h2>Pick a beer</h2>
+                        <div class="form-row">
+                            <label class="large" for="name">Name</label><input id="name">
+                            <label class="large" for="hops">Hops</label><input id="hops">
+                        </div>  
+                        <div class="form-row">
+                            <label for="abv">Abv</label><input id="abv">
+                            <label for="ibu">Ibu </label><input id="ibu">
+                            <label for="epc">Epc</label><input id="epc">
+                        </div>
+                        <div class="form-row">
+                            <button>Find beer</button>
+                        </div>
                     </form>
                 </div>`;
     }

@@ -1,13 +1,45 @@
 @import "variables";
 
 .beer-selector {
+  padding: 25px;
+}
+
+form {
+  font-size: $beer-name-font-size;
   background: $grey-background;
-  text-align: center;
-  margin: 50px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 
-  h1 {
-    align-self: flex-start;
+  h2 {
+    border-bottom: 1px solid black;
+    margin: 5px;
+    color: $blue;
+    font-size: $beer-name-font-size;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  label {
+    text-transform: uppercase;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .form-row * {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .form-row input {
+    flex-grow: 1;
+    font-size: $beer-name-font-size;
+  }
+
+  .form-row button {
   }
 }
+
