@@ -17,7 +17,7 @@ export default class BeerSelectorView {
                             <label for="ebc">Ebc</label><input id="ebc">
                         </div>
                         <div class="form-row">
-                            <button>Find beer</button>
+                            <button id="find-beer">Find beer</button>
                         </div>
                     </form>
                 </div>`;
@@ -25,5 +25,9 @@ export default class BeerSelectorView {
 
     bind() {
         this.element.innerHTML = this.render();
+        const findButoon = document.getElementById("find-beer");
+        findButoon.addEventListener("click", function () {
+            alert("Hello. My name is Inigo Montoya. You killed my father. Prepare to die.");
+        });
     }
 }
