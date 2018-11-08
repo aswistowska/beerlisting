@@ -7,7 +7,10 @@ export default class BeerSelectorView {
         return `<div class="beer-selector">
                     <h1>Pick a beer</h1>
                     <form>
-                    
+                        Name <input type="text">
+                        Hops <input type="text"><br>
+                        Abv <input type="text"> Ibu <input type="text"> Ebc <input type="text"><br>
+                        <button>Find beer</button>
                     </form>
                 </div>`;
     }

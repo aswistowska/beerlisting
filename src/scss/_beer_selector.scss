@@ -1,3 +1,13 @@
-.beer-selector {
+@import "variables";
 
+.beer-selector {
+  background: $grey-background;
+  text-align: center;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    align-self: flex-start;
+  }
 }
