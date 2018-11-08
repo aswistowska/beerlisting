@@ -42,8 +42,7 @@ gulp.task("serve", function () {
     gulp.watch("./src/scss/*.scss", ["scss"]);
     gulp.watch("./src/*.html", ["html"]);
     gulp.watch("./images/*", ["images"]);
-    gulp.watch("./fonts/*", ["fonts"]);
-    gulp.watch(["./build/*.html", "./build/css/*.css", "./build/js/*.js", "./build/images/*", "./build/fonts/*"])
+    gulp.watch(["./build/*.html", "./build/css/*.css", "./build/js/*.js", "./build/images/*"])
         .on("change", browserSync.reload);
 
 });
@@ -62,13 +61,6 @@ gulp.task("images", function (done) {
         .on("end", done);
 });
 
-gulp.task("fonts", function (done) {
-    gulp
-        .src("./fonts/*")
-        .pipe(gulp.dest("./build/fonts"))
-        .on("end", done);
-});
-
 gulp.task("scss", function () {
     return gulp.src("./src/scss/*.scss")
         .pipe(sass().on("error", sass.logError))
@@ -77,4 +69,4 @@ gulp.task("scss", function () {
         .pipe(gulp.dest("./build/css/"));
 });
 
-gulp.task("default", ["scss", "html", "images", "fonts", "browserify", "serve" ]);
+gulp.task("default", ["scss", "html", "images", "browserify", "serve" ]);
