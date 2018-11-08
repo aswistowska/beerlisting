@@ -8,6 +8,9 @@ export default class App {
     constructor(elementId) {
         this.element = document.getElementById(elementId);
         this.api = new Api();
+        if(!location.hash){
+            location.hash = "beers/1";
+        }
         if(location.hash.startsWith("#beers/")){
             const page = parseInt(location.hash.substr(7));
             this.showGrid(page);

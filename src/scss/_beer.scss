@@ -1,0 +1,85 @@
+@import "variables";
+
+article {
+  text-align: center;
+  padding: $standard-margin*3 $standard-margin;
+  margin: $standard-margin;
+  background: $beer-background;
+  display: flex;
+  flex-direction: column;
+
+  &.large {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 4*$standard-margin;
+
+    .details {
+      width: 40%;
+      padding: 40px;
+      margin-right: 15%;
+
+      > p, h1, h2 {
+
+        max-width: 400px;
+        margin: $standard-margin auto;
+      }
+    }
+
+  }
+
+  align-items: center;
+
+  img {
+    max-height: 300px;
+    width: auto;
+  }
+
+  h1 {
+    font-size: $beer-name-font-size;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: $beer-name-font-size;
+  }
+  h2 {
+    font-size: $beer-name-font-size;
+    font-weight: normal;
+    text-transform: capitalize;
+    margin: $beer-name-font-size;
+    color: $blue;
+  }
+
+  > p {
+    margin: $standard-margin;
+    height: auto;
+    max-width: 400px;
+    flex-grow: 1;
+
+  }
+
+}
+
+.parameters {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  @include serif-font();
+  font-weight: 100;
+  $font-size: 12px;
+  font-size: $font-size;
+  margin: $standard-margin;
+  .squares {
+    &.ph {
+      color: lighten($beer-background, 10%);
+    }
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: $standard-margin;
+    p.value {
+      font-size: $font-size * 1.5;
+      font-weight: normal;
+    }
+  }
+}

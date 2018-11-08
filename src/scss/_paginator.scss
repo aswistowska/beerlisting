@@ -1,0 +1,28 @@
+@import "variables";
+
+.paginator {
+  $pager-size: 40px;
+  margin: $pager-size;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .page-number {
+    margin: 15px;
+    width: $pager-size;
+    height: $pager-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+    &.current {
+
+      color: $light-background;
+      background: $blue;
+    }
+  }
+}

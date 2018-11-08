@@ -19,19 +19,18 @@ export default class GridView {
     renderBeer(beer) {
         const parameters = renderBeerParameters(beer);
 
-        return `<article class="grid-beers-container">
+        return `<article>
         <img src="${beer.imageUrl}">
-        <div class="grid-descriptions-box">
-        <h1>${beer.name}</h1><p>${beer.description}</p>
-        </div>
-        ${parameters}
+            <h1>${beer.name}</h1>
+            <p>${beer.description}</p>
+            ${parameters}
         </article>`;
     }
 
     render(beersList) {
         const renderedBeerList = beersList.map(beer => this.renderBeer(beer)).join("");
 
-        return `<section>${renderedBeerList}</section><div id="paginator-container"></div>`;
+        return `<section class="grid">${renderedBeerList}</section><div id="paginator-container"></div>`;
     }
 
 }

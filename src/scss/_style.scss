@@ -1,94 +1,49 @@
 @import "variables";
 
 body {
-  font-family: "Open Sans";
-}
+  @include sans-serif-font();
+  background-color: $light-background;
+  font-weight: 300;
 
-header {
-  background: #000000 url("/images/logo.png") no-repeat center;
-  height: 460px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  > header {
+    background: $dark-background url("/images/logo.png") no-repeat center;
+    background-size: $header-size*0.75;
+    height: $header-size;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
-  nav {
-    align-self: flex-end;
-    margin: 75px;
+    nav {
+      align-self: flex-end;
+      margin: (0.25 / 2) * $header-size;
 
-    li {
-      display: inline-block;
+      li {
+        display: inline-block;
 
-      a {
-        color: #ffffff;
-        text-transform: uppercase;
-        font-size: 16px;
-        margin: 10px;
+        a {
+          color: #ffffff;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: normal;
 
-        &.active {
-          color: $blue;
+          margin: $standard-margin;
+
+          &.active {
+            color: $blue;
+            text-decoration: underline;
+          }
         }
       }
     }
   }
-}
-
-section {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  padding: 10px;
-
-  .grid-beers-container {
+  #app {
     text-align: center;
-    padding: 20px;
-    margin: 10px;
-    background: #EFEFEF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    img {
-      height: 300px;
-      width: auto;
-    }
-
-    .grid-descriptions-box {
-      flex-grow: 1;
-
-      h1 {
-        font-size: 22px;
-        font-family: "Open Sans";
-        font-weight: 300;
-        text-transform: capitalize;
-        margin: 10px 0 10px 0;
-      }
-
-      p {
-        margin: 10px;
-        height: auto;
-      }
-    }
-
-    .squares {
-      display: inline-block;
-      margin: 10px;
-    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: $standard-margin;
   }
 }
 
-#paginator-container {
-  text-align: center;
 
-  .page-number {
-    display: inline-block;
-    min-width: 20px;
-    text-align: center;
-    background: white;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-
-    &.current {
-      background: yellow;
-    }
-  }
-}

@@ -13,10 +13,10 @@ function renderPhBackgroundColor(pH){
 export function renderBeerParameters(beer) {
     const pHColor = renderPhBackgroundColor(beer.ph);
 
-    const beerAbv = beer.abv? `<li class="squares"><p>ABV</p><p>${beer.abv}</p></li>` : "";
-    const beerIbu = beer.ibu? `<li class="squares"><p>IBU</p><p>${beer.ibu}</p></li>` : "";
-    const beerPh = beer.ph? `<li class="squares" style="background-color: ${pHColor}"><p>pH</p><p>${beer.ph}</p></li>` : "";
+    const beerAbv = beer.abv? `<li class="squares abv"><p>ABV</p><p class="value">${beer.abv}</p></li>` : "";
+    const beerIbu = beer.ibu? `<li class="squares ibu"><p>IBU</p><p class="value">${beer.ibu}</p></li>` : "";
+    const beerPh = beer.ph? `<li class="squares ph" style="background-color: ${pHColor}"><p>pH</p><p class="value">${beer.ph}</p></li>` : "";
 
-    return `<ul>${beerAbv}${beerIbu}${beerPh}</ul>`;
+    return `<ul class="parameters">${beerAbv}${beerIbu}${beerPh}</ul>`;
 
 }

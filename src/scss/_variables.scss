@@ -1,1 +1,18 @@
+$dark-background: rgb(0,0,0);
+$light-background: rgb(255, 255, 255);
 $blue: rgb(22, 112, 192);
+
+$yellow-button: rgb(250, 182, 14);
+$header-size: 250px;
+$beer-name-font-size: 18px;
+$beer-background: #ededed;
+$standard-margin: 10px;
+$modal-background: #fefefe;
+
+@mixin sans-serif-font() {
+  font-family: "Open Sans", sans-serif;
+}
+
+@mixin serif-font() {
+  font-family: 'Playfair Display', serif;
+}

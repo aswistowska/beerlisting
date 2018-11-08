@@ -1,0 +1,14 @@
+@import "variables";
+
+button {
+  &#render-another-beer {
+    background-color: $yellow-button;
+    margin: 4*$standard-margin;
+  }
+  background-color: $blue;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  padding: $standard-margin *2 $standard-margin * 4;
+  letter-spacing: 1px;
+}

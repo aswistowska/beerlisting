@@ -12,7 +12,9 @@ export default class SingleBeerView {
         const modalCloseButton = document.getElementById("close-modal");
         modalCloseButton.addEventListener("click", this.hideModal.bind(this));
         const anotherBeerButton = document.getElementById("render-another-beer");
-        anotherBeerButton.addEventListener("click", function() { window.app.showRandomBeer();});
+        anotherBeerButton.addEventListener("click", function () {
+            window.app.showRandomBeer();
+        });
 
         // console.log(beer);
     }
@@ -23,7 +25,7 @@ export default class SingleBeerView {
 
     showModal() {
         this.modal.classList.remove("hidden");
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == this.modal) {
                 this.hideModal();
             }
@@ -40,15 +42,15 @@ export default class SingleBeerView {
         const modal = this.renderIngredients(beer.ingredients);
         const parameters = renderBeerParameters(beer);
 
-        return `<article class="single-beer-container">
-        <div class="single-beer-content">
+        return `<article class="large">
             <img src="${beer.imageUrl}">
-           <div class="single-beer-description">
-            <h1>${beer.name}</h1>
-            <h2>${beer.tagline}</h2>
-            <p>${beer.description}</p>
-            ${parameters}
-            <button id="ingredients">Ingredients</button></div></div>
+            <div class="details">
+                    <h1>${beer.name}</h1>
+                    <h2>${beer.tagline}</h2>
+                    <p>${beer.description}</p>
+                    ${parameters}
+                    <button id="ingredients">Ingredients</button>
+            </div>
            </article>${modal}<button id="render-another-beer">Give me another beer</button>`;
 
     }
@@ -60,10 +62,12 @@ export default class SingleBeerView {
 
         return `<div class="modal hidden" id="ingredients-modal">
                 <div class="modal-content">
-                <span class="close" id="close-modal">&times;</span>
+                    <header>Ingredients<span class="close" id="close-modal">&times;</span></header>
+                
                 <dl><dt>Malt:</dt><dd>${renderedMalt}</dd>
                 <dt>Hops:</dt><dd>${renderedHops}</dd>
-                <dt>Yeast:</dt><dd>${ingredients.yeast}</dd></dl></div></div>`;
+                <dt>Yeast:</dt><dd>${ingredients.yeast}</dd></dl></div>
+                </div>`;
     }
 
     renderIngredient(ingredient) {

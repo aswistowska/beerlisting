@@ -1,0 +1,56 @@
+@import "variables";
+
+.modal {
+  &.hidden {
+    display: none
+  }
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    header {
+      display: flex;
+      text-transform: uppercase;
+      justify-content: space-between;
+      padding: 2*$standard-margin;
+      background: $blue;
+      color: $modal-background;
+      .close {
+        cursor: pointer;
+        &:hover, &:focus {
+          color: darken($modal-background, 30%);
+          text-decoration: none;
+        }
+      }
+    }
+
+    dl {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 4*$standard-margin;
+
+      dt {
+        font-weight: normal;
+      }
+
+      dd {
+        margin-inline-start: 0;
+        margin-bottom: 2*$standard-margin;
+        text-align: left;
+      }
+    }
+    background-color: $modal-background;
+    margin: auto;
+    width: 80%;
+  }
+}
