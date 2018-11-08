@@ -4,7 +4,12 @@ export default class BeerSelectorView {
     }
 
     render() {
-        return `<h1>Hello... it's me you looking for?!</h1>`;
+        return `<div class="beer-selector">
+                    <h1>Pick a beer</h1>
+                    <form>
+                    
+                    </form>
+                </div>`;
     }
 
     bind() {

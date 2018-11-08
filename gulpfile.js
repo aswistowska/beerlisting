@@ -77,4 +77,4 @@ gulp.task("scss", function () {
         .pipe(gulp.dest("./build/css/"));
 });
 
-gulp.task("default", ["html", "images", "fonts", "browserify", "serve" ]);
+gulp.task("default", ["scss", "html", "images", "fonts", "browserify", "serve" ]);
