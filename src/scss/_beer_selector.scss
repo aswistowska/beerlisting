@@ -1,15 +1,18 @@
 @import "variables";
 
 .beer-selector {
-  padding: 25px;
+  padding: $standard-padding * 2.5;
+  max-width: 900px;
+  margin: auto;
 }
 
 form {
   font-size: $beer-name-font-size;
   background: $grey-background;
-  padding: 20px;
+  padding: $standard-padding * 2;
   display: flex;
   flex-direction: column;
+  text-align: left;
 
   h2 {
     border-bottom: 1px solid black;
@@ -18,10 +21,15 @@ form {
     font-size: $beer-name-font-size;
     font-weight: 500;
     text-transform: uppercase;
+    padding-bottom: $standard-padding;
   }
 
   label {
     text-transform: uppercase;
+  }
+
+  .form-row:first-of-type{
+    padding-top: $standard-padding * 3;
   }
 
   .form-row {
@@ -30,7 +38,7 @@ form {
   }
 
   .form-row * {
-    padding: 10px;
+    padding: $standard-padding;
     margin: 5px;
   }
 

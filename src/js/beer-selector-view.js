@@ -14,7 +14,7 @@ export default class BeerSelectorView {
                         <div class="form-row">
                             <label for="abv">Abv</label><input id="abv">
                             <label for="ibu">Ibu </label><input id="ibu">
-                            <label for="epc">Epc</label><input id="epc">
+                            <label for="ebc">Ebc</label><input id="ebc">
                         </div>
                         <div class="form-row">
                             <button>Find beer</button>

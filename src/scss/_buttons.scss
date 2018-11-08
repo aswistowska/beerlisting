@@ -4,11 +4,19 @@ button {
   &#render-another-beer {
     background-color: $yellow-button;
     margin: 4*$standard-margin;
+
+    &:hover{
+      background-color: darken($yellow-button, 30%);
+    }
   }
+
   background-color: $blue;
   text-transform: uppercase;
   color: white;
   font-size: 18px;
   padding: $standard-margin *2 $standard-margin * 4;
   letter-spacing: 1px;
+  &:hover{
+    background-color: darken($blue, 30%);
+  }
 }
