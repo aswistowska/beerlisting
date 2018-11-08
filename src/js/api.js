@@ -23,4 +23,33 @@ export default class Api{
             .then(response => response.json())
             .then(myJson => new Beer(myJson[0]));
     }
+    findBeers(name, hops, abv, ibu, ebc){
+        const params = [];
+        function encodeStr(variable, value) {
+            if(value) {
+                const encoded= encodeURIComponent(value.replace(" ", "_"));
+                params.push(`${variable}=${encoded}`);
+            }
+        }
+        function encodeInt(variable, value, range=0) {
+            if(value) {
+                const min = value-range;
+                const max = value + range + 1;
+                params.push(`${variable}_gt=${min}`);
+                params.push(`${variable}_lt=${max}`);
+            }
+        }
+        encodeStr("beer_name", name);
+        encodeStr("hops", hops);
+        encodeInt("abv", abv);
+        encodeInt("ibu", ibu, 3);
+        encodeInt("ebc", ebc);
+        params.push("per_page=78");
+
+        const joinedParams = params.join("&");
+        const url = `https://api.punkapi.com/v2/beers?${joinedParams}`;
+        return fetch(url)
+            .then(response => response.json())
+            .then(myJson => myJson.map(json => new Beer(json)));
+    }
 }

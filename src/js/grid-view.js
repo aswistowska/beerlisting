@@ -11,9 +11,13 @@ export default class GridView {
             window.app.showGrid(page -1);
         }
         // console.log(beersList);
-        this.element.innerHTML = this.render(beersList, page);
+        this.element.innerHTML = this.render(beersList);
         const paginator = new PaginatorView(document.getElementById("paginator-container"));
         paginator.setPage(page);
+    }
+
+    setBeersNoPagination(beersList) {
+        this.element.innerHTML = this.render(beersList);
     }
 
     renderBeer(beer) {

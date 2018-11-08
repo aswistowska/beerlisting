@@ -3,7 +3,7 @@ import Ingredients from "./ingredients";
 export default class Beer {
 
     constructor(json) {
-        console.log(json);
+        //console.log(json);
         this.json = json;
     }
 

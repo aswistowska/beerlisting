@@ -70,4 +70,17 @@ export default class App {
 
     }
 
+    showFoundBeers(name, hops, abv, ibu, ebc){
+        setTimeout(function(){
+            this.cleanNavClass();
+            this.setNavClass("beers");
+            // window.location.hash = `beers/${page}`;
+            this.element.innerHTML = "";
+            const gridView = new GridView(this.element);
+            this.api.findBeers(name, hops, abv, ibu, ebc).then(
+                beers => gridView.setBeersNoPagination(beers)
+            );
+        }.bind(this));
+    }
+
 }
